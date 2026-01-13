@@ -5,27 +5,28 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.container {
+    position: relative;
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
-}
-
-.container {
-    position: relative;
+    /* 1. เปลี่ยนพื้นหลังเป็นสีขาว */
+    background: #ffffff; 
 }
 
 .clock-box {
     padding: 40px 60px;
-    background: rgba(255, 255, 255, 0.1);
+    /* 2. ปรับกล่องให้ดูเข้ากับพื้นหลังขาว (ใส่เงาสีเทาจางๆ แทน) */
+    background: rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 20px;
-    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     text-align: center;
-    color: white;
 }
 
 #time {
@@ -33,11 +34,15 @@ body {
     font-weight: 700;
     letter-spacing: 5px;
     margin-bottom: 10px;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    /* 3. เปลี่ยนตัวเลขเป็นสีส้มนีออน */
+    color: #ff6600; 
+    /* 4. ใส่แสงฟุ้งแบบนีออนสีส้ม */
+    text-shadow: 0 0 10px #ff6600, 0 0 20px #ffae00; 
 }
 
 #date {
     font-size: 1.2rem;
     letter-spacing: 2px;
-    color: rgba(255, 255, 255, 0.8);
+    /* 5. เปลี่ยนตัวหนังสือวันที่เป็นสีเทาเข้มเพื่อให้ตัดกับพื้นหลังขาว */
+    color: #333333; 
 }
